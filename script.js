@@ -58,10 +58,11 @@ function calcular() {
 
     if (!valido) return;
 
-    let pesoCeraBruto = agua * densidade;
+    let pesoCeraBruto = Math.round(agua * densidade);
     let divisor = 1 + (percEssencia / 100);
-    let ceraFinal = (pesoCeraBruto / divisor) * qtdVelas;
-    let essenciaFinal = (pesoCeraBruto - (pesoCeraBruto / divisor)) * qtdVelas;
+    let ceraFinal = (pesoCeraBruto * qtdVelas) / divisor;
+    let essenciaFinal = (pesoCeraBruto * qtdVelas) - ceraFinal;
+
 
     document.getElementById("cera").innerText = "Cera necessária: " + ceraFinal.toFixed(2) + " g";
     document.getElementById("essenciaRes").innerText = "Essência necessária: " + essenciaFinal.toFixed(2) + " g";

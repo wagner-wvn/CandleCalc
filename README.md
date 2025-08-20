@@ -1,4 +1,4 @@
-<h1 align="center">Calculadora de Velas</h1>
+<h1 align="center">Calculadora de Velas 🕯️</h1>
 
 <br>
 

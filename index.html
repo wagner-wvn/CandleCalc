@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Velas</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="">
+</head>
+<body>
+  <h1>Calculadora de Velas</h1>
+  <div class="container">
+    <label for="agua">Peso da água (g)</label>
+    <input type="number" id="agua" placeholder="Ex: 100">
+    <p class="error-message" id="erro-agua" style="display:none;">Preencha o peso da água.</p>
+
+    <label for="qtdVelas">Quantidade de velas</label>
+    <input type="number" id="qtdVelas" placeholder="Ex: 2">
+    <p class="error-message" id="erro-qtdVelas" style="display:none;">Preencha a quantidade de velas.</p>
+
+    <label for="essencia">Percentual de essência (%)</label>
+    <input type="number" id="essencia" placeholder="Ex: 10">
+    <p class="error-message" id="erro-essencia" style="display:none;">Preencha o percentual de essência.</p>
+
+    <button class="btn" onclick="calcular()">Calcular</button>
+
+    <div class="result" id="resultado" style="display:none;">
+      <p id="cera"></p>
+      <p id="essenciaRes"></p>
+    </div>
+
+    <p class="advanced-link" onclick="toggleAdvanced()">⚙️ Ajustes avançados</p>
+    <div class="advanced-settings" id="advancedSettings">
+      <label for="densidade">Densidade da cera (padrão: 0.85)</label>
+      <input type="number" step="0.01" id="densidade">
+    </div>
+  </div>
+  <div class="container">
+    <p class="info-link" onclick="toggleInfo()">❓ Como calculamos?</p>
+    <div class="info-text" id="infoText" style="display:none;">
+      Para calcular a cera e a essência das velas, usamos este passo a passo simples:<br>
+      1. Multiplicamos a água pela densidade da cera (ex: 100g × 0,85 = 85g).<br>
+      2. Dividimos pelo total incluindo a essência (85 ÷ 110% = 77g de cera).<br>
+      3. Subtraímos a cera do bruto para achar a essência (85 - 77 = 8g de essência).
+    </div>
+  </div>
+
+  <footer>
+    © <span id="ano"></span> <a href="https://www.instagram.com/velas_dodoya/">Ateliê Velas D’Odoyá</a>
+  </footer>
+</body>
+<script src="script.js"></script>
+</html>

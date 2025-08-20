@@ -11,15 +11,15 @@
   <h1>Calculadora de Velas</h1>
   <div class="container">
     <label for="agua">Peso da água (g)</label>
-    <input type="number" id="agua" placeholder="Ex: 100">
+    <input type="number" inputmode="numeric" id="agua" placeholder="Ex: 100">
     <p class="error-message" id="erro-agua" style="display:none;">Preencha o peso da água.</p>
 
     <label for="qtdVelas">Quantidade de velas</label>
-    <input type="number" id="qtdVelas" placeholder="Ex: 2">
+    <input type="number" inputmode="numeric" id="qtdVelas" placeholder="Ex: 2">
     <p class="error-message" id="erro-qtdVelas" style="display:none;">Preencha a quantidade de velas.</p>
 
     <label for="essencia">Percentual de essência (%)</label>
-    <input type="number" id="essencia" placeholder="Ex: 10">
+    <input type="number" inputmode="numeric" id="essencia" placeholder="Ex: 10">
     <p class="error-message" id="erro-essencia" style="display:none;">Preencha o percentual de essência.</p>
 
     <button class="btn" onclick="calcular()">Calcular</button>
@@ -51,3 +51,4 @@
 </body>
 <script src="script.js"></script>
 </html>
+

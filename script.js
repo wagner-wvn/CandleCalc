@@ -79,6 +79,7 @@ function toggleInfo() {
 
 function toggleAdvanced() {
     const settings = document.getElementById("advancedSettings");
-    settings.style.display = settings.style.display === "none" ? "block" : "none";
-
+    const display = window.getComputedStyle(settings).display;
+    settings.style.display = display === "none" ? "block" : "none";
 }
+

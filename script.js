@@ -9,7 +9,7 @@ document.getElementById("ano").textContent = new Date().getFullYear();
 //########################################################
 const densidadeInput = document.getElementById("densidade");
 const densidadeSalva = localStorage.getItem("densidadeCera");
-densidadeInput.value = densidadeSalva ? densidadeSalva : 0.85;
+densidadeInput.value = densidadeSalva ? densidadeSalva : 0.855;
 
 
 //########################################################
@@ -32,7 +32,7 @@ function calcular() {
     let agua = parseFloat(document.getElementById("agua").value);
     let qtdVelas = parseInt(document.getElementById("qtdVelas").value);
     let percEssencia = parseFloat(document.getElementById("essencia").value);
-    let densidade = parseFloat(densidadeInput.value) || 0.85;
+    let densidade = parseFloat(densidadeInput.value) || 0.855;
 
     let valido = true;
 
@@ -80,4 +80,5 @@ function toggleInfo() {
 function toggleAdvanced() {
     const settings = document.getElementById("advancedSettings");
     settings.style.display = settings.style.display === "none" ? "block" : "none";
+
 }
